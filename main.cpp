@@ -2,6 +2,8 @@
 #include "opencv2/opencv.hpp"
 using namespace cv;
 
+int threshold = 225;
+
 int main() {
     VideoCapture cap;
     VideoCapture cap2;
@@ -17,8 +19,8 @@ int main() {
         cap >> frame;
         cap2 >> frame2;
 
-        frame -= Scalar(255, 200, 255);
-        frame2 -= Scalar(255, 200, 255);
+        frame -= Scalar(255, threshold, 255);
+        frame2 -= Scalar(255, threshold, 255);
 
         if( frame.empty() || frame2.empty()) break; // end of video stream
         imshow("Camera 0", frame);
