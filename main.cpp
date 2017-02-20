@@ -6,7 +6,7 @@ using namespace cv;
 
 int main() {
     VideoCapture cap;
-    const char *file = "cam.jpg";
+    const char *file = "cam0.jpg";
     struct stat buffer;
 
     if(!cap.open(0))
