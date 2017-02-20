@@ -5,9 +5,9 @@
       function update() {
         document.getElementById("cam0").src = "cam0.jpg?r=" + new Date().getTime();
       }
-      window.onload {
-        setInterval(update(), 50);
-      }
+      window.setInterval(function(){
+            update()
+        }, 50);
     </script>
   </body>
 </html>
